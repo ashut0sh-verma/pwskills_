@@ -104,7 +104,7 @@ select customer_id , sum(spending) over() as tot_spend , spending from table1
 table3 as (
 select customer_id , count(customer_id) over() as tot_cust , spending/tot_spend * 100 as percentage , spending , tot_spend from table2
 )
-select * from table3 ; -- please guide how to find percentile
+select * from table3 ; -- please guide how to find top 20% percentage
 
 -- que 8 --
 
